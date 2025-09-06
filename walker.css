@@ -1,6 +1,72 @@
-@define-color selected-text #8caaee;
-@define-color text #c6d0f5;
-@define-color base #24273a;
-@define-color border #c6d0f5;
-@define-color foreground #c6d0f5;
-@define-color background #24273a;
+@define-color selected-text #4a8bb8;  /* Cosmic blue accent */
+@define-color text #e8f4f8;           /* Moonlight silver */
+@define-color base #0f1520;           /* Deep space void */
+@define-color surface #1b2951;        /* Space blue */
+@define-color overlay #243454;        /* Lighter space blue */
+@define-color muted #3b6b7d;          /* Atmospheric teal */
+@define-color subtle #2e5266;         /* Deep cosmic teal */
+@define-color border #4a8bb8;         /* Cosmic blue accent */
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+}
+
+#window {
+    background: rgba(15, 21, 32, 0.95);
+    border: 2px solid @border;
+    border-radius: 10px;
+}
+
+#box {
+    padding: 20px;
+}
+
+#search {
+    background: @surface;
+    border: 2px solid @border;
+    border-radius: 5px;
+    padding: 10px;
+    color: @text;
+    font-size: 14px;
+}
+
+#search:focus {
+    border-color: @selected-text;
+    box-shadow: 0 0 10px rgba(74, 139, 184, 0.5);
+}
+
+#list {
+    margin-top: 10px;
+}
+
+#entry {
+    padding: 10px;
+    margin: 5px 0;
+    background: @surface;
+    border-radius: 5px;
+    color: @text;
+}
+
+#entry:hover {
+    background: @overlay;
+    border-left: 3px solid @subtle;
+}
+
+#entry:selected {
+    background: linear-gradient(90deg, rgba(74, 139, 184, 0.2), rgba(59, 107, 125, 0.2));
+    border-left: 3px solid @selected-text;
+    color: @selected-text;
+}
+
+#entry #icon {
+    margin-right: 10px;
+}
+
+#entry #name {
+    font-weight: bold;
+}
+
+#entry #description {
+    color: @muted;
+    font-size: 12px;
+}

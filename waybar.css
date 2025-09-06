@@ -1,2 +1,93 @@
-@define-color foreground #e6e6fa;
-@define-color background #1a1a2e;
+@define-color foreground #e8f4f8;  /* Moonlight silver */
+@define-color background #0f1520;  /* Deep space void */
+@define-color primary #4a8bb8;     /* Cosmic blue accent */
+@define-color secondary #3b6b7d;   /* Atmospheric teal */
+@define-color success #2e5266;     /* Deep cosmic teal */
+@define-color danger #a05548;      /* Mars rust */
+@define-color warning #c97b6b;     /* Dusty rose */
+@define-color info #b8c5d1;        /* Metallic silver */
+@define-color light #e8f4f8;       /* Moonlight silver */
+@define-color dark #1b2951;        /* Space blue */
+@define-color muted #243454;       /* Lighter space blue */
+
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(15, 21, 32, 0.95);
+    color: @foreground;
+    border-bottom: 2px solid @primary;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    color: @muted;
+    border-bottom: 3px solid transparent;
+}
+
+#workspaces button.active {
+    background: rgba(74, 139, 184, 0.15);
+    color: @primary;
+    border-bottom: 3px solid @primary;
+}
+
+#workspaces button:hover {
+    background: rgba(59, 107, 125, 0.2);
+    color: @secondary;
+}
+
+#cpu, #memory, #temperature, #network, #pulseaudio, #battery, #clock {
+    padding: 0 10px;
+    color: @foreground;
+}
+
+#cpu {
+    color: @secondary;
+}
+
+#memory {
+    color: @warning;
+}
+
+#temperature {
+    color: @danger;
+}
+
+#temperature.critical {
+    background: @danger;
+    color: @background;
+}
+
+#network {
+    color: @info;
+}
+
+#pulseaudio {
+    color: @primary;
+}
+
+#battery {
+    color: @success;
+}
+
+#battery.critical:not(.charging) {
+    background: @danger;
+    color: @background;
+    animation: blink 0.5s linear infinite alternate;
+}
+
+#clock {
+    color: @light;
+    font-weight: bold;
+}
+
+@keyframes blink {
+    to {
+        background-color: @background;
+        color: @danger;
+    }
+}
