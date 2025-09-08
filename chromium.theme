@@ -1,1 +1,38 @@
-12,12,12
+{
+  "version": "1.0",
+  "name": "Spaceship Theme",
+  "colors": {
+    "frame": [15, 21, 32],
+    "frame_inactive": [27, 41, 61],
+    "frame_incognito": [18, 18, 32],
+    "frame_incognito_inactive": [27, 41, 61],
+    "toolbar": [36, 52, 84],
+    "tab_text": [232, 244, 248],
+    "tab_background_text": [198, 208, 245],
+    "tab_background_text_inactive": [131, 139, 167],
+    "tab_background_text_incognito": [198, 208, 245],
+    "tab_background_text_incognito_inactive": [131, 139, 167],
+    "bookmark_text": [232, 244, 248],
+    "ntp_background": [15, 21, 32],
+    "ntp_text": [232, 244, 248],
+    "ntp_link": [74, 139, 184],
+    "ntp_section": [36, 52, 84],
+    "button_background": [59, 107, 125],
+    "omnibox_text": [232, 244, 248],
+    "omnibox_background": [36, 52, 84]
+  },
+  "properties": {
+    "ntp_background_alignment": "center",
+    "ntp_background_repeat": "no-repeat"
+  },
+  "tints": {
+    "frame": [-1, -1, 0.85],
+    "frame_inactive": [-1, -1, 0.75],
+    "frame_incognito": [-1, -1, 0.8],
+    "frame_incognito_inactive": [-1, -1, 0.7],
+    "background_tab": [-1, -1, 0.9],
+    "background_tab_inactive": [-1, -1, 0.7],
+    "background_tab_incognito": [-1, -1, 0.85],
+    "background_tab_incognito_inactive": [-1, -1, 0.65]
+  }
+}
